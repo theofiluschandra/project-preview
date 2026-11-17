@@ -1,0 +1,101 @@
+/* TRIAL VIEW */
+body.trial-mode {
+    overflow-x: hidden;
+}
+
+.trial-overlay {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 50;
+    margin-top: 0px;
+    min-height: 520px;
+    padding: 180px 24px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(235, 229, 218, 0) 0%, #e9e3d8 35%, #ded5c7 100%);
+}
+
+.trial-lock-card {
+    width: min(100%, 560px);
+    padding: 65px 40px;
+    text-align: center;
+    background: linear-gradient(120deg,
+            #f4f0e8,
+            #e8dfd1,
+            #f4f0e8);
+    background-size: 200% 200%;
+    animation: shadeMove 7s ease infinite;
+    border: 1px solid rgba(105, 89, 67, .15);
+    box-shadow: 0 20px 60px rgba(70, 58, 43, .08);
+}
+
+@keyframes shadeMove {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.lock-icon {
+    display: block;
+    font-size: 28px;
+    color: #88765e;
+    margin-bottom: 20px;
+}
+
+.trial-label,
+.trial-lock-card small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #877760;
+}
+
+.trial-lock-card h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 43px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #504638;
+    margin: 22px 0;
+}
+
+.trial-lock-card p {
+    max-width: 380px;
+    margin: 0 auto 30px;
+    color: #756b5d;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.trial-contact {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #504638;
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: background .3s ease;
+}
+
+.trial-contact:hover {
+    background: #88765e;
+}
+
+.trial-lock-card small {
+    margin-top: 30px;
+}
+
+@media(max-width:600px) {
+    .trial-lock-card {
+        padding: 48px 22px;
+    }
+}
